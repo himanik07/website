@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Himani K</h2>
+        <ul>
+    <li><a href="bio-page.html"><i class="fa fa-user-circle"></i>Bio Page</a></li>
+    <li><a href="qualifications-page.html"><i class="fa fa-link"></i>Qualification Page</a></li>
+    <li><a href="hobbies.html"><i class="fa fa-book"></i>Hobbies Page</a></li>
+    <li><a href="gallery.html"><i class="fa fa-camera"></i>Photo Gallery</a></li>
+    <li><a href="contact.html"><i class="fa fa-id-card"></i>Contact Page</a></li>
+    </ul>
+    <div class="social_media">
+          <a href="https://www.linkedin.com/in/himani-k-47287b205"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/himanik07"><i class="fab fa-github"></i></a>
+    </div>
+    </div>
+    <div class="main_content">
+        <div class="info">
+          <h1><center>Hello Everyone!!!</center></h1><br>
+          <center><img src="images/success-img.png" alt="Image 1"></center>
+        </div>
+        <div class="server">
+        <center><h1>Server Time:</center></h1>
+<script>
+function showdate()
+{
+var d=new Date();
+var h=d.getHours();
+var m=d.getMinutes();
+var s=d.getSeconds();
+document.getElementById("client-date").innerHTML=(h+':'+m+':'+s);
+setTimeout(showdate,1000);
+}
+</script>
+<body onload="showdate()">
+<p id='client-date'></p>
+</div>
+  <div class="visitor">
+    <center><h1 id="visitorCount">Visitor Count: 0</center></h1>
+  <p id="visitor-count"></p>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Update visitor count
+    var visitorCount = localStorage.getItem('Counter');
+    if (visitorCount) {
+      visitorCount = parseInt(visitorCount) + 1;
+    } else {
+      visitorCount = 1;
+    }
+    localStorage.setItem('visitorCount', visitorCount);
+    document.getElementById('visitorCount').textContent = 'Visitors: ' + visitorCount;
+  });</script>
+</div>
+
+</body>
+</html>

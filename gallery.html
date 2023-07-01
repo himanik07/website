@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <style>
+    /* Additional CSS styles */
+    .fullpage{
+      background-image: url("images/bio-back.jpeg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      grid-gap: 3px; /* Gap between images */
+    }
+    h1{
+        font-size: 60px;
+        text-align: center;
+    }
+    
+    .gallery img {
+      width: 80%;
+      height: 80%;
+      cursor: pointer;
+    }
+    .zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+  </style>
+</head>
+<body>
+  <div class="fullpage">
+  <h1>MY GALLERY</h1>
+  <div class="gallery">
+    <div class="zoom">
+    <img src="images/image-1.jpg" alt="Image 1">
+    </div>
+    <div class="zoom">
+    <img src="images/image-2.jpg" alt="Image 2">
+    </div>
+    <div class="zoom">
+    <img src="images/image-3.jpeg" alt="Image 3">
+    </div>
+    <div class="zoom">
+    <img src="images/image4.jpg" alt="Image 4">
+    </div>
+    <div class="zoom">
+    <img src="images/image5.jpg" alt="Image 5">
+    </div>
+    <div class="zoom">
+    <img src="images/image-6.jpg" alt="Image 6">
+    </div>
+    <div class="zoom">
+    <img src="images/image7.jpg" alt="Image 7">
+    </div>
+    <div class="zoom">
+    <img src="images/image8.jpeg" alt="Image 8">
+    </div>
+    <div class="zoom">
+    <img src="images/image9.jpeg" alt="Image 9">
+    </div>
+  </div>
+</div>
+</body>
+</html>
