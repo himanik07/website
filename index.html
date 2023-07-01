@@ -45,21 +45,21 @@ setTimeout(showdate,1000);
 <p id='client-date'></p>
 </div>
   <div class="visitor">
-    <center><h1 id="visitorCount">Visitor Count: 0</center></h1>
-  <p id="visitor-count"></p>
+  <center><h1 id="visitorCount">Visitor Count: 0</h1></center>
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Update visitor count
-    var visitorCount = localStorage.getItem('Counter');
-    if (visitorCount) {
-      visitorCount = parseInt(visitorCount) + 1;
-    } else {
-      visitorCount = 1;
-    }
-    localStorage.setItem('visitorCount', visitorCount);
-    document.getElementById('visitorCount').textContent = 'Visitors: ' + visitorCount;
-  });</script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update visitor count
+      var visitorCount = localStorage.getItem('visitorCount'); // Corrected key name
+      if (visitorCount) {
+        visitorCount = parseInt(visitorCount) + 1;
+      } else {
+        visitorCount = 1;
+      }
+      localStorage.setItem('visitorCount', visitorCount); // Corrected key name
+      document.getElementById('visitorCount').textContent = 'Visitor Count: ' + visitorCount;
+      document.getElementById('visitor-count').textContent = 'Visitor Count: ' + visitorCount;
+    });
+  </script>
 </div>
-
 </body>
 </html>
